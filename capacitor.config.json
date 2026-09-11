@@ -1,0 +1,9 @@
+{
+  "appId": "ye.gov.legal.platform",
+  "appName": "المنصة العدلية",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}

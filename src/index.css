@@ -1,0 +1,171 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Fira Code", "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Global resets for Royal Navy & Ivory Parchment (Exceptional contrast, legibility, and comfort for legal reading) */
+body {
+  font-family: var(--font-sans);
+  direction: rtl;
+  background-color: #F8F6F0 !important; /* Elegant Pearl Warm Parchment */
+  color: #0F172A !important; /* Deep Royal Slate Navy for reading comfort */
+}
+
+/* Force off-white parchment/paper on all major layout containers and cards */
+.bg-stone-50, [class*="bg-stone-50"] {
+  background-color: #F8F6F0 !important;
+}
+
+.bg-white, [class*="bg-white"] {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 4px 18px -2px rgba(15, 23, 42, 0.05) !important;
+}
+
+.bg-slate-900, [class*="bg-slate-900"] {
+  background-color: #0B1E36 !important; /* Royal Dark Navy Header */
+}
+
+.bg-slate-950, [class*="bg-slate-950"] {
+  background-color: #061121 !important; /* Deepest Navy footer and sub-tabs */
+}
+
+.bg-stone-100, [class*="bg-stone-100"] {
+  background-color: #F0EDE4 !important; /* Light cream blocks */
+}
+
+/* Background gold overlay states and alert zones */
+.bg-amber-50, .bg-amber-50\/50, [class*="bg-amber-50"] {
+  background-color: rgba(181, 138, 60, 0.08) !important;
+}
+
+/* Hover effects adapted to majestic sand/cream hues */
+.hover\:bg-stone-50:hover {
+  background-color: #EFECE2 !important;
+}
+
+.hover\:bg-stone-100:hover {
+  background-color: #E5E1D4 !important;
+}
+
+.hover\:bg-amber-50:hover {
+  background-color: rgba(181, 138, 60, 0.15) !important;
+}
+
+/* Borders in high-end polished classic legal folder tan */
+.border, .border-stone-200, .border-stone-100, .border-stone-150, .border-stone-300, .border-slate-800, .border-slate-750 {
+  border-color: #E2DDD1 !important;
+}
+
+/* Text overlays with premium legibility for long reading of court documents & laws */
+.text-slate-900, .text-stone-850, .text-stone-800, .text-stone-700, .text-slate-850, .text-slate-800, .text-slate-950, .text-stone-900 {
+  color: #0F172A !important; /* Strong dark contrast instead of light on dark */
+}
+
+.text-stone-600, .text-stone-500, .text-stone-400, .text-slate-400, .text-slate-500 {
+  color: #4A5568 !important; /* Mid-tone slate gray for secondary details */
+}
+
+/* Premium legal gold highlights for status items and critical callouts */
+.text-amber-500, .text-amber-400, .text-amber-600, .text-amber-700 {
+  color: #B58A3C !important;
+}
+
+.border-amber-500, .border-amber-400 {
+  border-color: #B58A3C !important;
+}
+
+/* Gold action buttons & badges */
+.bg-amber-400, .bg-amber-500, [class*="bg-amber-400"], [class*="bg-amber-500"] {
+  background-color: #B58A3C !important;
+  color: #FFFFFF !important;
+}
+
+.bg-amber-400:hover, .bg-amber-500:hover {
+  background-color: #9C742D !important;
+}
+
+/* Form controls with comfortable deep white paper backgrounds and sharp borders */
+input, select, textarea {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  border-color: #CBD5E1 !important;
+  outline: none !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #B58A3C !important;
+  box-shadow: 0 0 0 2px rgba(181, 138, 60, 0.15) !important;
+}
+
+option {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+}
+
+/* Calendar priority slots */
+.text-slate-950 {
+  color: #0B1E36 !important;
+}
+
+#app-header {
+  border-bottom-color: #B58A3C !important;
+}
+
+#app-footer {
+  background-color: #061121 !important;
+  border-top-color: #1E293B !important;
+}
+
+/* Scrollbars customized for elegant document drawers */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F6F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B58A3C;
+}
+
+/* High-contrast beautiful inputs for the login/auth page */
+#welcome-auth-page input {
+  background-color: #061121 !important; /* Deepest Navy background */
+  color: #FFFFFF !important; /* Pure white text for extreme contrast */
+  border-color: #334155 !important; /* Distinct dark slate border */
+  font-size: 15px !important; /* Clear, readable large text (prevents browser zoom and squinting) */
+  font-weight: 800 !important; /* Extra bold text for supreme readability */
+}
+
+#welcome-auth-page input:focus {
+  border-color: #B58A3C !important; /* Gold border on focus */
+  box-shadow: 0 0 0 3px rgba(181, 138, 60, 0.25) !important; /* Golden glow */
+}
+
+#welcome-auth-page input::placeholder {
+  color: #64748B !important; /* Clear slate placeholder */
+  font-weight: 600 !important;
+}
+
+/* Force browser autofill to respect dark navy background and bright white text */
+#welcome-auth-page input:-webkit-autofill,
+#welcome-auth-page input:-webkit-autofill:hover, 
+#welcome-auth-page input:-webkit-autofill:focus, 
+#welcome-auth-page input:-webkit-autofill:active {
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-box-shadow: 0 0 0 1000px #061121 inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+

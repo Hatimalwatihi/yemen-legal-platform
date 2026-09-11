@@ -1,0 +1,6 @@
+{
+  "name": "منصة إدارة مكتب المحاماة",
+  "description": "منصة متكاملة واحترافية لإدارة مكتب المحاماة والعملاء والقضايا والجلسات والمالية محلياً بكفاءة وسرعة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

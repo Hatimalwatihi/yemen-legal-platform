@@ -1,0 +1,14 @@
+{
+  "id": "/",
+  "short_name": "المنصة العدلية",
+  "name": "المنصة العدلية لمكاتب المحاماة في الجمهورية اليمنية",
+  "icons": [
+    { "src": "/icon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any maskable" }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "background_color": "#0c0a09",
+  "theme_color": "#f59e0b",
+  "display": "standalone",
+  "orientation": "portrait"
+}

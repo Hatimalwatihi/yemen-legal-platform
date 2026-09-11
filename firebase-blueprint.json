@@ -1,0 +1,45 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "Represents a synchronized lawyer account in the system",
+      "type": "object",
+      "properties": {
+        "username": { "type": "string", "description": "Unique username for login" },
+        "password": { "type": "string", "description": "Hashed password" },
+        "subscriptionStatus": { "type": "string", "description": "License level of the user (e.g. active, expired)" },
+        "subscriptionExpires": { "type": "string", "description": "ISO date-time string when subscription ends" },
+        "inviteCodeUsed": { "type": "string", "description": "Invite code used for register verification" },
+        "isAdmin": { "type": "boolean", "description": "Indicates administration power" },
+        "sessionToken": { "type": "string", "description": "Cryptographically secure session verification token" },
+        "lastSynced": { "type": "string", "description": "Last timestamp the user backed up data" },
+        "cases": { "type": "array", "description": "Array of legal cases owned by this user" },
+        "sessions": { "type": "array", "description": "Array of court sessions owned by this user" },
+        "documents": { "type": "array", "description": "Array of legal documents owned by this user" }
+      },
+      "required": ["username", "password", "subscriptionStatus"]
+    },
+    "InviteCode": {
+      "title": "InviteCode",
+      "description": "An administrative invite code for secure account creation",
+      "type": "object",
+      "properties": {
+        "code": { "type": "string", "description": "The unique capitalized invite code" },
+        "isUsed": { "type": "boolean", "description": "Whether this code has been claimed" },
+        "usedBy": { "type": "string", "description": "The username of the account that claimed the code" },
+        "createdDate": { "type": "string", "description": "ISO timestamp for administrative audit logs" }
+      },
+      "required": ["code", "isUsed"]
+    }
+  },
+  "firestore": {
+    "/users/{username}": {
+      "schema": "User",
+      "description": "Root collection for locked cloud-linked lawyer accounts"
+    },
+    "/invite_codes/{code}": {
+      "schema": "InviteCode",
+      "description": "Root collection for exclusive validated administrative invitations"
+    }
+  }
+}
