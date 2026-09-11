@@ -33,7 +33,7 @@ function verifyPassword(password: string, stored: string): boolean {
 }
 
 const app = express();
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 app.disable("x-powered-by");
 
